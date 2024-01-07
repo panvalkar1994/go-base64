@@ -113,7 +113,7 @@ func addPadding(outStr string) string {
 func getBitString(b byte) string {
 	value := ""
 	for i := 7; i >= 0; i-- {
-		bit := int((b >> uint(1)) & 1)
+		bit := int((b >> uint(i)) & 1)
 		value += strconv.Itoa(bit)
 	}
 	return value
